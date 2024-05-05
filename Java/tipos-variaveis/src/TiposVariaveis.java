@@ -1,4 +1,4 @@
-public class App {
+public class TiposVariaveis {
     public class TipoDados {
         public static void main(String[] args) {
             byte idade = 123;
