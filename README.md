@@ -1,4 +1,4 @@
-# Meu Projeto Java
+# Projeto Java
 
 Este é um projeto Java criado por mim. O projeto demonstra conceitos básicos de programação Java e pode servir como uma introdução para iniciantes ou um exemplo simples para referência.
 
