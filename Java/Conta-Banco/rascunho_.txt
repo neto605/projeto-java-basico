@@ -1,0 +1,41 @@
+CASO 1:
+
+Math expression:  if salBase > salPret
+                  system.out.println("Ligar para o candidato");
+			
+			else if salBASE = salPret 
+				system.out.println("LIGAR PARA O CANDIDATO COM A CONTRA PROPOSTA");
+
+				else if 
+ 					system.out.printl("AGUARDANDO RESULTADO DOS DEMAIS CANDIDATOS");
+
+
+CASO 2:
+
+Foi solicitado que nosso sistema garanta que diante de inúmeras candidaturas sejam selecionados apenas no máximo 5 candidatos para entrevista onde o salário pretendido seja menor ou igual ao salário base.
+
+
+string [] candidatos = {"FELIPE",  "MARCIA", "JULIA", "PAULO", "AUGUSTO", "FABRICIO", "MIRELA", "DANIELA", "JORGE"};
+
+
+// método para trazer um valor randômico de 1.800 a 2200 (Lembrando que o salário base é de R$2.000,00
+
+import java.util.concurrent.TheradLocalRandom;
+
+static double valorPretendido(){
+
+
+return TheradLocalRandom.current().nextDouble(1800, 2200) 
+
+}
+
+
+
+if (salarioPretendido >= 2000) {
+
+candidato += candidato
+
+system.out.println("Candidado selecionado"); 
+
+
+}
