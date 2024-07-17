@@ -2,6 +2,7 @@ package domain;
 
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public class Dev {
@@ -11,13 +12,33 @@ public class Dev {
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 
     public void inscreverBootcamp(Bootcamp bootcamp) {   
-       this.conteudosInscritos.add(bootcamp.getConteudos());
+       this.conteudosInscritos.addAll(bootcamp.getConteudos());
+       bootcamp.getDevsIncritos().add(this);
 
     }
 
-    public void progredir() {}
+    public void progredir() {   
+       Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
 
-    public void calcularTotalXP() {}
+       if (conteudo.isPresent()){
+        this.conteudosConcluidos.add(conteudo.get());
+        this.conteudosInscritos.remove(conteudo.get());
+
+       } else {
+
+        System.err.println(" Tu não tá matriculado em nenhum conteúdo!");
+       }
+
+    }
+
+    public double calcularTotalXP() {
+        
+       return this.conteudosConcluidos
+        .stream()
+        .mapToDouble(Conteudo :: calcularXP)
+        .sum();
+
+    }
 
     // Getters
     public String getNome() {
